@@ -658,12 +658,12 @@ Stacked items showing accumulated context.
 
 ## Integration Icons
 
-Display integration logos from the `/integration-icons/` folder. See `/integration-icons/index.md` for complete list of available icons.
+Display integration logos from the `/assets/integration-icons/` folder. See `/assets/integration-icons/index.md` for complete list of available icons.
 
 ### Single Integration Icon
 ```html
 <div class="integration-icon">
-  <img src="integration-icons/slack-icon.png" alt="Slack">
+  <img src="assets/integration-icons/slack-icon.png" alt="Slack">
 </div>
 ```
 
@@ -691,12 +691,12 @@ For displaying multiple integrations in a grid layout.
 
 ```html
 <div class="integration-grid">
-  <div class="integration-icon"><img src="integration-icons/slack-icon.png" alt="Slack"></div>
-  <div class="integration-icon"><img src="integration-icons/microsoft-teams-icon.png" alt="Teams"></div>
-  <div class="integration-icon"><img src="integration-icons/jira-icon.png" alt="Jira"></div>
-  <div class="integration-icon"><img src="integration-icons/salesforce-icon.png" alt="Salesforce"></div>
-  <div class="integration-icon"><img src="integration-icons/notion-icon.png" alt="Notion"></div>
-  <div class="integration-icon"><img src="integration-icons/gmail-icon.png" alt="Gmail"></div>
+  <div class="integration-icon"><img src="assets/integration-icons/slack-icon.png" alt="Slack"></div>
+  <div class="integration-icon"><img src="assets/integration-icons/microsoft-teams-icon.png" alt="Teams"></div>
+  <div class="integration-icon"><img src="assets/integration-icons/jira-icon.png" alt="Jira"></div>
+  <div class="integration-icon"><img src="assets/integration-icons/salesforce-icon.png" alt="Salesforce"></div>
+  <div class="integration-icon"><img src="assets/integration-icons/notion-icon.png" alt="Notion"></div>
+  <div class="integration-icon"><img src="assets/integration-icons/gmail-icon.png" alt="Gmail"></div>
 </div>
 ```
 
@@ -736,7 +736,7 @@ For integration showcase slides.
 ```html
 <div class="integration-item">
   <div class="integration-icon">
-    <img src="integration-icons/salesforce-icon.png" alt="Salesforce">
+    <img src="assets/integration-icons/salesforce-icon.png" alt="Salesforce">
   </div>
   <span class="integration-label">Salesforce</span>
 </div>
@@ -894,10 +894,10 @@ For showing platform foundation elements (integrations, connectors, models).
   </div>
   <div class="foundation-items">
     <div class="foundation-icon">
-      <img src="integration-icons/slack-icon.png" alt="Slack">
+      <img src="assets/integration-icons/slack-icon.png" alt="Slack">
     </div>
     <div class="foundation-icon">
-      <img src="integration-icons/jira-icon.png" alt="Jira">
+      <img src="assets/integration-icons/jira-icon.png" alt="Jira">
     </div>
     <span class="foundation-tag">+45</span>
   </div>

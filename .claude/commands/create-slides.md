@@ -305,7 +305,7 @@ For dark slides, use the white version: `assets/langdock-logo-white.png` (if ava
 
 ## ICONS
 
-Use inline SVGs from the icon library: `icons/index.md`
+Use inline SVGs from the icon library: `assets/tabler-icons/index.md`
 
 When you need an icon, read the icon library and copy the SVG code directly into HTML.
 

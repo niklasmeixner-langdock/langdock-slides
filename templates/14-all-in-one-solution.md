@@ -367,13 +367,13 @@ Comprehensive view of the Langdock platform showing the blue product box with fe
         </div>
         <div class="foundation-items">
           <div class="foundation-icon">
-            <img src="integration-icons/slack-icon.png" alt="Slack">
+            <img src="assets/integration-icons/slack-icon.png" alt="Slack">
           </div>
           <div class="foundation-icon">
-            <img src="integration-icons/jira-icon.png" alt="Jira">
+            <img src="assets/integration-icons/jira-icon.png" alt="Jira">
           </div>
           <div class="foundation-icon">
-            <img src="integration-icons/hubspot-icon.png" alt="HubSpot">
+            <img src="assets/integration-icons/hubspot-icon.png" alt="HubSpot">
           </div>
           <span class="foundation-tag highlight">Yours</span>
         </div>
@@ -471,11 +471,11 @@ Show only 2 sections:
 Expand integration icons in foundation:
 ```html
 <div class="foundation-items">
-  <div class="foundation-icon"><img src="integration-icons/slack-icon.png"></div>
-  <div class="foundation-icon"><img src="integration-icons/microsoft-teams-icon.png"></div>
-  <div class="foundation-icon"><img src="integration-icons/jira-icon.png"></div>
-  <div class="foundation-icon"><img src="integration-icons/salesforce-icon.png"></div>
-  <div class="foundation-icon"><img src="integration-icons/hubspot-icon.png"></div>
+  <div class="foundation-icon"><img src="assets/integration-icons/slack-icon.png"></div>
+  <div class="foundation-icon"><img src="assets/integration-icons/microsoft-teams-icon.png"></div>
+  <div class="foundation-icon"><img src="assets/integration-icons/jira-icon.png"></div>
+  <div class="foundation-icon"><img src="assets/integration-icons/salesforce-icon.png"></div>
+  <div class="foundation-icon"><img src="assets/integration-icons/hubspot-icon.png"></div>
   <span class="foundation-tag highlight">+45</span>
 </div>
 ```

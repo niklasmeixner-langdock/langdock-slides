@@ -225,7 +225,7 @@ Use integration icons for "Integrations" slide:
 ```html
 <div class="integration-grid">
   <div class="integration-icon">
-    <img src="integration-icons/slack-icon.png" alt="Slack">
+    <img src="assets/integration-icons/slack-icon.png" alt="Slack">
   </div>
   <!-- ... more icons -->
 </div>

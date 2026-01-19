@@ -2,7 +2,7 @@
 
 PNG icons for Langdock integrations. Use these when displaying integration logos on slides.
 
-**Location**: `/integration-icons/{name}-icon.png`
+**Location**: `/assets/integration-icons/{name}-icon.png`
 
 **Usage**: Reference icons via absolute URLs when importing HTML to Figma. For local development, use relative paths.
 
