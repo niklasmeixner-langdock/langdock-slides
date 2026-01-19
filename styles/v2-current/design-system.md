@@ -213,11 +213,70 @@ Tags should complement their context:
 
 ---
 
+## Icons
+
+Icons are inline SVGs from Tabler Icons. Copy from `../../shared/assets/tabler-icons/index.md`.
+
+### Icon Reference
+
+| Icon | File | Use For |
+|------|------|---------|
+| `message` | message.svg | Chat, Conversations |
+| `robot` | robot.svg | Assistants, AI Agents |
+| `git-branch` | git-branch.svg | Workflows, Automation |
+| `plug-connected` | plug-connected.svg | Integrations, Connections |
+| `database` | database.svg | Knowledge Base, Data |
+| `sparkles` | sparkles.svg | AI, Magic, Models |
+| `shield-check` | shield-check.svg | Security, Protected |
+| `users` | users.svg | Teams, Collaboration |
+| `settings` | settings.svg | Configuration |
+| `chart-bar` | chart-bar.svg | Analytics, Data |
+| `search` | search.svg | Search, Find |
+| `folder` | folder.svg | Projects, Organization |
+| `key` | key.svg | Authentication, API Key |
+| `code` | code.svg | Code, Development |
+| `api` | api.svg | API, Endpoints |
+| `world` | world.svg | Web Search, Internet |
+| `rocket` | rocket.svg | Getting Started, Launch |
+| `bulb` | bulb.svg | Tips, Insights, Ideas |
+| `check` | check.svg | Success, Done |
+| `arrow-right` | arrow-right.svg | Flow, Direction |
+| `chevron-right` | chevron-right.svg | Breadcrumbs, Navigation |
+| `player-play` | player-play.svg | Demo, Play |
+| `clock` | clock.svg | Scheduling, Time |
+| `paperclip` | paperclip.svg | Attachments |
+| `info-circle` | info-circle.svg | Information |
+
+### Usage
+
+```html
+<!-- Set size and color via style -->
+<svg style="width: 32px; height: 32px; color: #2F2F2F;" ...>
+
+<!-- On dark backgrounds, use white -->
+<svg style="width: 32px; height: 32px; color: #FFFFFF;" ...>
+```
+
+### Common Icon Mappings
+
+| Feature | Recommended Icon |
+|---------|-----------------|
+| Chat | `message` |
+| Assistants | `robot` |
+| Workflows | `git-branch` |
+| Integrations | `plug-connected` |
+| Knowledge | `database` |
+| Security | `shield-check` |
+| Admin/Settings | `settings` |
+| Analytics | `chart-bar` |
+| Search | `search` |
+| API | `api` or `code` |
+
+---
+
 ## Shared Resources
 
-These resources are shared between style guides:
-
-- **Icons**: `../../shared/assets/tabler-icons/`
+- **Icons**: `../../shared/assets/tabler-icons/` (see index.md for SVG code)
 - **Integration logos**: `../../shared/assets/integration-icons/`
 - **Langdock logo**: `../../shared/assets/langdock-logo.png`
 - **Product knowledge**: `../../shared/knowledge/index.md`
