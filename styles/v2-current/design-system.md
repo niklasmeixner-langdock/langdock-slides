@@ -9,41 +9,46 @@ This is the primary, modern brand style guide for Langdock presentations, based 
 ### Colors
 
 ```css
-/* Brand Palette */
---color-sand: #D8D5CB;                /* Light warm background, cards */
---color-teal-dark: #144C5E;           /* Primary accent, CTAs, icons */
---color-sage: #66716F;                /* Secondary text, muted elements */
---color-charcoal: #505655;            /* Body text on light backgrounds */
---color-peach: #FFDCB9;               /* Highlight, warm accent */
---color-mint: #C6D0CF;                /* Light accent, tags, borders */
---color-dark: #2F2F2F;                /* Primary text, headings */
---color-brown-warm: #4D473C;          /* Warm dark cards, feature sections */
-
-/* Background Colors */
---color-bg-light: #D8D5CB;            /* Page background (sand) */
---color-bg-white: #FFFFFF;            /* Cards, content areas */
---color-bg-elevated: #C6D0CF;         /* Elevated surfaces, tags (mint) */
-
-/* Dark Theme Colors */
---color-dark-warm: #4D473C;           /* Warm dark cards (brown) */
---color-dark-cool: #2F2F2F;           /* Cool dark backgrounds */
+/* Background */
+--color-bg: #FFFFFF;                  /* Always white for slide backgrounds */
 
 /* Text Colors */
 --color-text-primary: #2F2F2F;        /* Primary text, headings */
 --color-text-secondary: #505655;      /* Body text, descriptions */
---color-text-muted: #66716F;          /* Labels, captions (sage) */
---color-text-on-dark: #FFFFFF;        /* Text on dark backgrounds */
---color-text-on-dark-secondary: rgba(255,255,255,0.75); /* Secondary on dark */
+--color-text-muted: #66716F;          /* Labels, captions */
+--color-text-on-dark: #FFFFFF;        /* Text on dark accent cards */
+--color-text-on-dark-secondary: rgba(255,255,255,0.75);
 
-/* Accent Colors */
---color-accent-primary: #144C5E;      /* Primary accent (teal) */
---color-accent-warm: #FFDCB9;         /* Warm accent (peach) */
---color-accent-light: #C6D0CF;        /* Light accent (mint) */
-
-/* Border Colors */
---color-border-light: rgba(47,47,47,0.1);   /* Light borders */
---color-border-dark: rgba(0,0,0,0.1);       /* Subtle borders */
+/* Accent Colors (use flexibly, iterate through these for variety) */
+--accent-sand: #D8D5CB;               /* Warm neutral */
+--accent-teal: #144C5E;               /* Dark teal */
+--accent-sage: #66716F;               /* Muted green-gray */
+--accent-charcoal: #505655;           /* Dark gray */
+--accent-peach: #FFDCB9;              /* Warm highlight */
+--accent-mint: #C6D0CF;               /* Cool light */
+--accent-dark: #2F2F2F;               /* Near black */
+--accent-brown: #4D473C;              /* Warm dark brown */
 ```
+
+### How to Use Accent Colors
+
+Accent colors are **flexible** and should be used to create visual variety, similar to the Langdock website:
+
+1. **Feature cards** - Iterate through accents (sand, mint, teal, brown, etc.)
+2. **Icon backgrounds** - Use light accents (sand, mint, peach)
+3. **Dark cards** - Use teal (#144C5E), brown (#4D473C), or dark (#2F2F2F)
+4. **Tags/pills** - Match the card background or use contrasting accent
+5. **Highlights** - Peach (#FFDCB9) for warm emphasis
+
+**Example pattern from website:**
+- Card 1: Sand background (#D8D5CB)
+- Card 2: White with mint elements
+- Card 3: Teal dark (#144C5E)
+- Card 4: Brown warm (#4D473C)
+- Card 5: Mint (#C6D0CF)
+- etc.
+
+Mix light and dark cards for visual rhythm. No strict rules - use contextually.
 
 ### Typography
 
@@ -161,115 +166,49 @@ This is the primary, modern brand style guide for Langdock presentations, based 
 
 ## Component Styles
 
-### Buttons
+### Cards (Accent Backgrounds)
+
+Cards can use any accent color. Common patterns:
 
 ```css
-/* Primary Button (Teal) */
-.button-primary {
-  background: #144C5E;
-  color: #FFFFFF;
-  padding: 12px 24px;
-  border-radius: 100px;
-  font-size: 16px;
-  font-weight: 500;
-}
+/* Light accent cards (dark text) */
+.card { background: #D8D5CB; color: #2F2F2F; }  /* Sand */
+.card { background: #C6D0CF; color: #2F2F2F; }  /* Mint */
+.card { background: #FFDCB9; color: #2F2F2F; }  /* Peach */
+.card { background: #FFFFFF; color: #2F2F2F; }  /* White */
 
-/* Secondary Button (Outline) */
-.button-secondary {
-  background: transparent;
-  border: 1.5px solid #66716F;
-  color: #2F2F2F;
-  padding: 12px 24px;
-  border-radius: 100px;
-}
-
-/* Accent Button (Dark) */
-.button-accent {
-  background: #2F2F2F;
-  color: #FFFFFF;
-  padding: 12px 24px;
-  border-radius: 100px;
-}
+/* Dark accent cards (white text) */
+.card { background: #144C5E; color: #FFFFFF; }  /* Teal */
+.card { background: #4D473C; color: #FFFFFF; }  /* Brown */
+.card { background: #2F2F2F; color: #FFFFFF; }  /* Dark */
+.card { background: #505655; color: #FFFFFF; }  /* Charcoal */
 ```
 
 ### Tags/Pills
 
+Tags should complement their context:
+
 ```css
-/* Light Tag (Mint) */
-.tag-light {
-  background: #C6D0CF;
-  color: #2F2F2F;
-  padding: 8px 16px;
-  border-radius: 100px;
-  font-size: 16px;
-  font-weight: 500;
-}
+/* On light backgrounds */
+.tag { background: #C6D0CF; color: #2F2F2F; }   /* Mint */
+.tag { background: #D8D5CB; color: #2F2F2F; }   /* Sand */
 
-/* Peach Tag */
-.tag-peach {
-  background: #FFDCB9;
-  color: #2F2F2F;
-  padding: 8px 16px;
-  border-radius: 100px;
-}
+/* On dark backgrounds */
+.tag { background: rgba(255,255,255,0.2); color: #FFFFFF; }
 
-/* Teal Tag */
-.tag-teal {
-  background: rgba(20,76,94,0.15);
-  color: #144C5E;
-  padding: 8px 16px;
-  border-radius: 100px;
-}
-
-/* Tag on Dark Background */
-.tag-on-dark {
-  background: rgba(255,255,255,0.2);
-  color: #FFFFFF;
-  padding: 8px 16px;
-  border-radius: 100px;
-}
+/* Accent tags */
+.tag { background: #FFDCB9; color: #2F2F2F; }   /* Peach highlight */
 ```
 
-### Cards
+### Icon Containers
 
 ```css
-/* White Card */
-.card-white {
-  background: #FFFFFF;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
-}
+/* On white/light slides */
+.icon-box { background: #C6D0CF; }  /* Mint */
+.icon-box { background: #D8D5CB; }  /* Sand */
 
-/* Sand Card */
-.card-sand {
-  background: #D8D5CB;
-  border-radius: 16px;
-  padding: 32px;
-}
-
-/* Mint Card */
-.card-mint {
-  background: #C6D0CF;
-  border-radius: 16px;
-  padding: 32px;
-}
-
-/* Dark Card (Warm Brown) */
-.card-dark {
-  background: #4D473C;
-  border-radius: 16px;
-  padding: 32px;
-  color: #FFFFFF;
-}
-
-/* Dark Card (Charcoal) */
-.card-charcoal {
-  background: #2F2F2F;
-  border-radius: 16px;
-  padding: 32px;
-  color: #FFFFFF;
-}
+/* On dark cards */
+.icon-box { background: rgba(255,255,255,0.15); }
 ```
 
 ---
