@@ -9,33 +9,40 @@ This is the primary, modern brand style guide for Langdock presentations, based 
 ### Colors
 
 ```css
-/* Primary Colors */
---color-primary-dark: #1a1c21;        /* Primary text, headings */
---color-primary-blue: #4469fc;        /* Accent, CTAs, links */
+/* Brand Palette */
+--color-sand: #D8D5CB;                /* Light warm background, cards */
+--color-teal-dark: #144C5E;           /* Primary accent, CTAs, icons */
+--color-sage: #66716F;                /* Secondary text, muted elements */
+--color-charcoal: #505655;            /* Body text on light backgrounds */
+--color-peach: #FFDCB9;               /* Highlight, warm accent */
+--color-mint: #C6D0CF;                /* Light accent, tags, borders */
+--color-dark: #2F2F2F;                /* Primary text, headings */
+--color-brown-warm: #4D473C;          /* Warm dark cards, feature sections */
 
 /* Background Colors */
---color-bg-light: #F8F8FC;            /* Page background */
---color-bg-elevated: #ECECF4;         /* Elevated surfaces, tags */
+--color-bg-light: #D8D5CB;            /* Page background (sand) */
 --color-bg-white: #FFFFFF;            /* Cards, content areas */
+--color-bg-elevated: #C6D0CF;         /* Elevated surfaces, tags (mint) */
 
 /* Dark Theme Colors */
---color-dark-warm: #4d473c;           /* Warm dark cards (feature cards) */
---color-dark-cool: #1a1c21;           /* Cool dark (text-based dark) */
+--color-dark-warm: #4D473C;           /* Warm dark cards (brown) */
+--color-dark-cool: #2F2F2F;           /* Cool dark backgrounds */
 
 /* Text Colors */
---color-text-primary: #1a1c21;        /* Primary text */
---color-text-secondary: rgba(26,28,33,0.55);  /* Subtitles, descriptions */
---color-text-muted: rgba(26,28,33,0.3);       /* Labels, captions */
+--color-text-primary: #2F2F2F;        /* Primary text, headings */
+--color-text-secondary: #505655;      /* Body text, descriptions */
+--color-text-muted: #66716F;          /* Labels, captions (sage) */
 --color-text-on-dark: #FFFFFF;        /* Text on dark backgrounds */
 --color-text-on-dark-secondary: rgba(255,255,255,0.75); /* Secondary on dark */
 
 /* Accent Colors */
---color-accent-teal: #96D7D2;         /* Highlight, decorative */
---color-accent-blue-light: rgba(68,105,252,0.1); /* Blue tint backgrounds */
+--color-accent-primary: #144C5E;      /* Primary accent (teal) */
+--color-accent-warm: #FFDCB9;         /* Warm accent (peach) */
+--color-accent-light: #C6D0CF;        /* Light accent (mint) */
 
 /* Border Colors */
---color-border-light: rgba(26,28,33,0.1);  /* Light borders */
---color-border-dark: rgba(0,0,0,0.1);      /* Subtle borders */
+--color-border-light: rgba(47,47,47,0.1);   /* Light borders */
+--color-border-dark: rgba(0,0,0,0.1);       /* Subtle borders */
 ```
 
 ### Typography
@@ -157,9 +164,9 @@ This is the primary, modern brand style guide for Langdock presentations, based 
 ### Buttons
 
 ```css
-/* Primary Button (Dark) */
+/* Primary Button (Teal) */
 .button-primary {
-  background: #1a1c21;
+  background: #144C5E;
   color: #FFFFFF;
   padding: 12px 24px;
   border-radius: 100px;
@@ -170,47 +177,46 @@ This is the primary, modern brand style guide for Langdock presentations, based 
 /* Secondary Button (Outline) */
 .button-secondary {
   background: transparent;
-  border: 1.5px solid rgba(26,28,33,0.2);
-  color: #1a1c21;
+  border: 1.5px solid #66716F;
+  color: #2F2F2F;
   padding: 12px 24px;
   border-radius: 100px;
 }
 
-/* Accent Button (Blue) */
+/* Accent Button (Dark) */
 .button-accent {
-  background: #4469fc;
+  background: #2F2F2F;
   color: #FFFFFF;
   padding: 12px 24px;
   border-radius: 100px;
-  box-shadow: 0px 4px 12px rgba(68, 105, 252, 0.25);
 }
 ```
 
 ### Tags/Pills
 
 ```css
-/* Light Tag */
+/* Light Tag (Mint) */
 .tag-light {
-  background: #ECECF4;
-  color: rgba(26,28,33,0.7);
+  background: #C6D0CF;
+  color: #2F2F2F;
   padding: 8px 16px;
   border-radius: 100px;
   font-size: 16px;
   font-weight: 500;
 }
 
-/* Dark Tag */
-.tag-dark {
-  background: rgba(26,28,33,0.08);
-  color: #1a1c21;
+/* Peach Tag */
+.tag-peach {
+  background: #FFDCB9;
+  color: #2F2F2F;
   padding: 8px 16px;
   border-radius: 100px;
 }
 
-/* Accent Tag */
-.tag-accent {
-  background: rgba(68,105,252,0.1);
-  color: #4469fc;
+/* Teal Tag */
+.tag-teal {
+  background: rgba(20,76,94,0.15);
+  color: #144C5E;
   padding: 8px 16px;
   border-radius: 100px;
 }
@@ -235,28 +241,34 @@ This is the primary, modern brand style guide for Langdock presentations, based 
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Elevated Card */
-.card-elevated {
-  background: #ECECF4;
+/* Sand Card */
+.card-sand {
+  background: #D8D5CB;
   border-radius: 16px;
   padding: 32px;
 }
 
-/* Dark Card (Warm) */
+/* Mint Card */
+.card-mint {
+  background: #C6D0CF;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+/* Dark Card (Warm Brown) */
 .card-dark {
-  background: #4d473c;
+  background: #4D473C;
   border-radius: 16px;
   padding: 32px;
   color: #FFFFFF;
 }
 
-/* Glass Card */
-.card-glass {
-  background: rgba(255,255,255,0.16);
-  backdrop-filter: blur(8px);
+/* Dark Card (Charcoal) */
+.card-charcoal {
+  background: #2F2F2F;
   border-radius: 16px;
   padding: 32px;
-  border: 1px solid rgba(255,255,255,0.2);
+  color: #FFFFFF;
 }
 ```
 
