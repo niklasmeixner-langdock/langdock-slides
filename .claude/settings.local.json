@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(npm install:*)",
+      "Bash(claude --version:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp list:*)",
+      "mcp__figma-desktop__get_design_context",
+      "mcp__figma-desktop__get_screenshot",
+      "mcp__figma-desktop__get_metadata",
+      "Bash(open:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3:*)",
+      "mcp__html-to-design__import-html",
+      "Bash(sort:*)",
+      "Bash(tr:*)"
+    ]
+  }
+}
