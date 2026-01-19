@@ -48,15 +48,12 @@ Big title with gradient background to introduce new sections.
                   radial-gradient(ellipse 100% 100% at 50% 100%, rgba(150,190,255,0.4) 0%, transparent 45%),
                   radial-gradient(ellipse 80% 80% at 15% 100%, rgba(130,180,255,0.3) 0%, transparent 40%);
     }
-    .logo-placeholder {
+    .logo {
       position: absolute;
       top: 80px;
       left: 64px;
-      font-size: 14px;
-      color: #717279;
-      background: #ededee;
-      padding: 8px 12px;
-      border-radius: 4px;
+      height: 24px;
+      width: auto;
     }
     .section-title {
       position: absolute;
@@ -80,7 +77,7 @@ Big title with gradient background to introduce new sections.
 </head>
 <body>
   <div class="gradient-bg"></div>
-  <div class="logo-placeholder">[Add Langdock logo]</div>
+  <img class="logo" src="https://raw.githubusercontent.com/niklasmeixner-langdock/langdock-slides/main/assets/langdock-logo.png" alt="Langdock">
   <h1 class="section-title">Section Title</h1>
   <p class="section-subtitle">Subtitle Text</p>
 </body>
@@ -90,9 +87,8 @@ Big title with gradient background to introduce new sections.
 ## Key Learnings
 
 ### Logo
-- Cannot use local file paths with html-to-design MCP
-- Use a placeholder `[Add Langdock logo]` and add the logo manually in Figma after import
-- Logo position: top 80px, left 64px
+- Use the GitHub-hosted logo URL: `https://raw.githubusercontent.com/niklasmeixner-langdock/langdock-slides/main/assets/langdock-logo.png`
+- Logo position: top 80px, left 64px, height 24px
 
 ### Gradient
 - **DO NOT use linear gradients** - they look flat and boring

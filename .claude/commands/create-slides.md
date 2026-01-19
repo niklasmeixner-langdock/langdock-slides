@@ -278,12 +278,12 @@ Available components:
 
 **Only add when the user explicitly requests a logo on the slide.**
 
-Logo file: `assets/langdock-logo.png`
+Logo URL: `https://raw.githubusercontent.com/niklasmeixner-langdock/langdock-slides/main/assets/langdock-logo.png`
 
 Position: Bottom-left corner (default) or as specified.
 
 ```html
-<img class="logo" src="assets/langdock-logo.png" alt="Langdock" height="24">
+<img class="logo" src="https://raw.githubusercontent.com/niklasmeixner-langdock/langdock-slides/main/assets/langdock-logo.png" alt="Langdock" height="24">
 ```
 
 ```css
@@ -296,7 +296,7 @@ Position: Bottom-left corner (default) or as specified.
 }
 ```
 
-For dark slides, use the white version: `assets/langdock-logo-white.png` (if available), or apply CSS filter:
+For dark slides, apply CSS filter to invert the logo to white:
 ```css
 .logo { filter: brightness(0) invert(1); }
 ```
