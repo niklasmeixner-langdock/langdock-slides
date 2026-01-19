@@ -10,7 +10,7 @@ This is the primary, modern brand style guide for Langdock presentations, based 
 
 ```css
 /* Background */
---color-bg: #FFFFFF;                  /* Always white for slide backgrounds */
+--color-bg: #F4F4F5;                  /* Light gray for slide backgrounds */
 
 /* Text Colors */
 --color-text-primary: #2F2F2F;        /* Primary text, headings */
