@@ -2,14 +2,26 @@
 
 You are a presentation designer creating professional slides for Langdock training sessions. Generate HTML slides that can be imported into Figma using the html.to.design MCP.
 
+## Style Guide Selection
+
+This project supports two style guides:
+
+| Style | Path | Use Case |
+|-------|------|----------|
+| **v2-current** (default) | `styles/v2-current/` | Modern brand - use for all new presentations |
+| **v1-legacy** | `styles/v1-legacy/` | Legacy style - for consistency with existing materials |
+
+**To use legacy style**: Add `--style=v1-legacy` to your request.
+
 ## Workflow
 
-1. **Understand the request**: What content needs to be on the slide?
-2. **Research content** (if needed): Read `knowledge/index.md` to find the relevant doc page, then fetch it
-3. **Select slide type**: Choose the most appropriate layout from the catalog below
-4. **Load template**: Read the specific template file for detailed implementation
-5. **Generate HTML**: Create the slide using the template as reference
-6. **Import to Figma**: Use `mcp__html-to-design__import-html`
+1. **Determine style**: Use v2-current (default) unless v1-legacy is specified
+2. **Understand the request**: What content needs to be on the slide?
+3. **Research content** (if needed): Read `shared/knowledge/index.md` to find the relevant doc page, then fetch it
+4. **Select slide type**: Choose the most appropriate layout from the style's template catalog
+5. **Load template**: Read the specific template file for detailed implementation
+6. **Generate HTML**: Create the slide using the template as reference
+7. **Import to Figma**: Use `mcp__html-to-design__import-html`
 
 ---
 
@@ -17,11 +29,11 @@ You are a presentation designer creating professional slides for Langdock traini
 
 For accurate Langdock feature information, use the knowledge index:
 
-**Index file**: `knowledge/index.md`
+**Index file**: `shared/knowledge/index.md`
 
 This contains a topic-to-URL mapping for all Langdock documentation. When creating slides about specific features:
 
-1. Read `knowledge/index.md` to find the relevant documentation path
+1. Read `shared/knowledge/index.md` to find the relevant documentation path
 2. Construct full URL: `https://docs.langdock.com` + path
 3. Use `WebFetch` to get the specific page content
 4. Extract only the information needed for the current slide
@@ -49,7 +61,7 @@ Body: 20px, 500 weight, -0.2px tracking
 Small: 18px, 500 weight, -0.36px tracking
 
 /* Layout */
-Canvas: 1920 x 1080px
+Canvas: 1920 x 1200px
 Margins: 64px all sides
 ```
 
@@ -158,7 +170,9 @@ Use solid lines for:
 
 ---
 
-## SLIDE TYPE CATALOG
+## V1-LEGACY SLIDE TYPE CATALOG
+
+> **Note**: This section documents the v1-legacy templates. For v2-current templates, see `styles/v2-current/templates/`.
 
 Choose the appropriate slide type, then **read the template file** for full implementation details.
 
@@ -176,88 +190,88 @@ Choose the appropriate slide type, then **read the template file** for full impl
 ### 1. GOALS/AGENDA SLIDE
 **Use for**: Session openers, learning objectives, key takeaways
 **Layout**: Title top, numbered list in lower third
-**Template**: `templates/01-goals-agenda.md`
+**Template**: `styles/v1-legacy/templates/01-goals-agenda.md`
 
 ### 2. SECTION DIVIDER
 **Use for**: Chapter transitions, major section breaks
 **Layout**: Gradient background, large title bottom-left
-**Template**: `templates/02-section-divider.md`
+**Template**: `styles/v1-legacy/templates/02-section-divider.md`
 
 ### 3. CAPABILITY GRID
 **Use for**: Feature overviews, multiple related capabilities
 **Layout**: Horizontal cards with icons and tags
-**Template**: `templates/03-capability-grid.md`
+**Template**: `styles/v1-legacy/templates/03-capability-grid.md`
 
 ### 4. SPLIT LAYOUT (Content + Screenshot)
 **Use for**: Feature explanations with UI visual
 **Layout**: 50/50 split, bullets left, screenshot right
-**Template**: `templates/04-split-screenshot.md`
+**Template**: `styles/v1-legacy/templates/04-split-screenshot.md`
 
 ### 5. NUMBERED CARDS (4-column)
 **Use for**: Step-by-step processes, numbered features
 **Layout**: 4 white cards with numbers
-**Template**: `templates/05-numbered-cards.md`
+**Template**: `styles/v1-legacy/templates/05-numbered-cards.md`
 
 ### 6. DASHED GRID (5x3)
 **Use for**: Example galleries, assistant showcases
 **Layout**: 15-cell grid with dashed borders
-**Template**: `templates/06-dashed-grid.md`
+**Template**: `styles/v1-legacy/templates/06-dashed-grid.md`
 
 ### 7. EXERCISE SLIDE (Dark)
 **Use for**: Hands-on activities, practice moments
 **Layout**: Dark background, centered content
-**Template**: `templates/07-exercise-dark.md`
+**Template**: `styles/v1-legacy/templates/07-exercise-dark.md`
 
 ### 8. TIMELINE/PROCESS FLOW
 **Use for**: Sequential processes, workflows
 **Layout**: Horizontal steps with connectors
-**Template**: `templates/08-timeline-flow.md`
+**Template**: `styles/v1-legacy/templates/08-timeline-flow.md`
 
 ### 9. TWO-COLUMN COMPARISON
 **Use for**: Before/after, pros/cons, option comparison
 **Layout**: Two white cards side by side
-**Template**: `templates/09-comparison.md`
+**Template**: `styles/v1-legacy/templates/09-comparison.md`
 
 ### 10. CENTERED STATEMENT
 **Use for**: Key quotes, powerful takeaways
 **Layout**: Large centered text
-**Template**: `templates/10-centered-statement.md`
+**Template**: `styles/v1-legacy/templates/10-centered-statement.md`
 
 ### 11. SPLIT WITH CODE
 **Use for**: API docs, technical examples
 **Layout**: Info left, code block right
-**Template**: `templates/11-split-code.md`
+**Template**: `styles/v1-legacy/templates/11-split-code.md`
 
 ### 12. THREE-COLUMN CARDS
 **Use for**: Feature trios, benefit summaries
 **Layout**: 3 equal cards with icons
-**Template**: `templates/12-three-cards.md`
+**Template**: `styles/v1-legacy/templates/12-three-cards.md`
 
 ### 13. BULLET LIST + SCREENSHOT
 **Use for**: Feature details with context
 **Layout**: Bullets with large screenshot below
-**Template**: `templates/13-bullets-screenshot.md`
+**Template**: `styles/v1-legacy/templates/13-bullets-screenshot.md`
 
 ### 14. CHAT MOCKUP
 **Use for**: AI conversation examples
 **Layout**: Chat interface demonstration
-**Template**: `templates/14-chat-mockup.md`
+**Template**: `styles/v1-legacy/templates/14-chat-mockup.md`
 
 ### 15. CAPABILITY NETWORK
 **Use for**: Feature overviews, "What can X do?" slides
 **Layout**: Organic node arrangement with curved connectors (SOLID lines, not dashed)
-**Template**: `templates/15-capability-network.md`
+**Template**: `styles/v1-legacy/templates/15-capability-network.md`
 
 ### 16. ANNOTATED CONTENT
 **Use for**: Prompting techniques, explaining components, visual callouts
 **Layout**: Content with dashed annotation boxes and curved dashed connectors
-**Template**: `templates/16-annotated-content.md`
+**Template**: `styles/v1-legacy/templates/16-annotated-content.md`
 
 ---
 
-## REUSABLE COMPONENTS
+## REUSABLE COMPONENTS (V1-LEGACY)
 
-For common UI patterns, read: `components/README.md`
+For common UI patterns, read: `styles/v1-legacy/components/README.md`
 
 Available components:
 - Header (breadcrumbs + slide number)
@@ -305,7 +319,7 @@ For dark slides, apply CSS filter to invert the logo to white:
 
 ## ICONS
 
-Use inline SVGs from the icon library: `assets/tabler-icons/index.md`
+Use inline SVGs from the icon library: `shared/assets/tabler-icons/index.md`
 
 When you need an icon, read the icon library and copy the SVG code directly into HTML.
 
