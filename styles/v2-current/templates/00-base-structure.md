@@ -42,7 +42,7 @@ The foundational HTML structure for all v2-current slides.
 
       /* Layout */
       --canvas-width: 1920px;
-      --canvas-height: 1200px;
+      --canvas-height: 1080px;
       --margin: 64px;
       --gap-xl: 48px;
       --gap-lg: 32px;

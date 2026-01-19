@@ -31,7 +31,7 @@ A dark-themed slide for hands-on activities, practice moments, and interactive e
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #4d473c;
       display: flex;
       flex-direction: column;
@@ -191,7 +191,7 @@ A dark-themed slide for hands-on activities, practice moments, and interactive e
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #4d473c;
       padding: 64px;
       display: flex;
@@ -411,7 +411,7 @@ A dark-themed slide for hands-on activities, practice moments, and interactive e
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #4d473c;
       display: flex;
       flex-direction: column;

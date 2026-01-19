@@ -30,7 +30,7 @@ Display feature comparisons, option analysis, or structured information in a gri
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -311,7 +311,7 @@ Display feature comparisons, option analysis, or structured information in a gri
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;

@@ -92,7 +92,7 @@ This is the primary, modern brand style guide for Langdock presentations, based 
 ```css
 /* Canvas */
 --canvas-width: 1920px;
---canvas-height: 1200px;
+--canvas-height: 1080px;
 
 /* Margins */
 --margin: 64px;

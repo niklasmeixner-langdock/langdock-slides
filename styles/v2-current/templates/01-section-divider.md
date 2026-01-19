@@ -29,7 +29,7 @@ A bold, full-screen slide for chapter transitions and section introductions.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       display: flex;
       flex-direction: column;
@@ -124,7 +124,7 @@ A bold, full-screen slide for chapter transitions and section introductions.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #4d473c;
       display: flex;
       flex-direction: column;
@@ -237,7 +237,7 @@ A bold, full-screen slide for chapter transitions and section introductions.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       display: flex;
       align-items: center;

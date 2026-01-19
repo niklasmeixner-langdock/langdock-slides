@@ -30,7 +30,7 @@ Display learning objectives, session goals, or agenda items in a clear, numbered
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -180,7 +180,7 @@ Display learning objectives, session goals, or agenda items in a clear, numbered
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       padding: 64px;
       display: flex;
@@ -303,7 +303,7 @@ Display learning objectives, session goals, or agenda items in a clear, numbered
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;

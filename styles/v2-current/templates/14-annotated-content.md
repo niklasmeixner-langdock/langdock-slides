@@ -30,7 +30,7 @@ Display content with callouts, annotations, highlights, or explanatory markers.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -248,7 +248,7 @@ Display content with callouts, annotations, highlights, or explanatory markers.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       padding: 64px;
       display: flex;
@@ -487,7 +487,7 @@ Display content with callouts, annotations, highlights, or explanatory markers.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #4d473c;
       padding: 64px;
       display: flex;
@@ -705,7 +705,7 @@ Display content with callouts, annotations, highlights, or explanatory markers.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px 120px;
       display: flex;

@@ -31,7 +31,7 @@ Display customer logos, partner brands, or trust indicators for social proof.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       padding: 64px;
       display: flex;
@@ -167,7 +167,7 @@ Display customer logos, partner brands, or trust indicators for social proof.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       display: flex;
       flex-direction: column;
@@ -257,7 +257,7 @@ Display customer logos, partner brands, or trust indicators for social proof.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       padding: 64px;
       display: flex;

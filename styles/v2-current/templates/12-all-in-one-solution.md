@@ -30,7 +30,7 @@ Comprehensive display showing how multiple features come together as a complete 
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -301,7 +301,7 @@ Comprehensive display showing how multiple features come together as a complete 
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #1a1c21;
       padding: 64px;
       display: flex;

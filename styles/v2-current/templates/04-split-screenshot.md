@@ -30,7 +30,7 @@ Display content alongside a UI screenshot or visual for feature explanations.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -231,7 +231,7 @@ Display content alongside a UI screenshot or visual for feature explanations.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #1a1c21;
       position: relative;
       overflow: hidden;
@@ -337,7 +337,7 @@ Display content alongside a UI screenshot or visual for feature explanations.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       padding: 64px;
       display: flex;

@@ -31,7 +31,7 @@ Display powerful quotes, key takeaways, or important statements with visual impa
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       display: flex;
       flex-direction: column;
@@ -110,7 +110,7 @@ Display powerful quotes, key takeaways, or important statements with visual impa
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #1a1c21;
       display: flex;
       flex-direction: column;
@@ -187,7 +187,7 @@ Display powerful quotes, key takeaways, or important statements with visual impa
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       display: flex;
       justify-content: center;
@@ -287,7 +287,7 @@ Display powerful quotes, key takeaways, or important statements with visual impa
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       display: flex;
       flex-direction: column;

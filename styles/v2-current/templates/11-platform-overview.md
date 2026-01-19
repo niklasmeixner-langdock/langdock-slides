@@ -30,7 +30,7 @@ Display product features, capabilities, or platform highlights in a visual grid.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -259,7 +259,7 @@ Display product features, capabilities, or platform highlights in a visual grid.
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;

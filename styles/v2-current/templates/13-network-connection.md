@@ -31,7 +31,7 @@ Display connected elements, relationships, and network diagrams with visual line
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -302,7 +302,7 @@ Display connected elements, relationships, and network diagrams with visual line
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       padding: 64px;
       display: flex;

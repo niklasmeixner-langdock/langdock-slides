@@ -30,7 +30,7 @@ Flexible two-column comparison layout for before/after, pros/cons, or side-by-si
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
@@ -294,7 +294,7 @@ Flexible two-column comparison layout for before/after, pros/cons, or side-by-si
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #FFFFFF;
       display: flex;
       position: relative;
@@ -425,7 +425,7 @@ Flexible two-column comparison layout for before/after, pros/cons, or side-by-si
 
     .slide {
       width: 1920px;
-      height: 1200px;
+      height: 1080px;
       background: #F8F8FC;
       padding: 64px;
       display: flex;
