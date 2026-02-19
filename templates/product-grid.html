@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* ==========================================================================
+       LANGDOCK SLIDE - PRODUCT GRID
+       Version: 5.0
+
+       2x2 grid of product cards using Langdock brand colors.
+       Matches the website product card design pattern.
+
+       Use for: Platform overview, product features, capabilities showcase.
+
+       Customization:
+       - Change card colors: .card-brown, .card-blue, .card-beige, .card-teal
+       - Update titles and descriptions per product
+       - Arrow buttons are optional - remove if not needed
+       ========================================================================== */
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+
+    .slide-content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* CARDS */
+    .card {
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-brown { background: #4D473C; }
+    .card-blue { background: #B6CEE2; }
+    .card-beige { background: #D8D5CB; }
+    .card-teal { background: #144C5E; }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .card-brown .card-title,
+    .card-teal .card-title { color: #FFFFFF; }
+    .card-blue .card-title,
+    .card-beige .card-title { color: #111827; }
+
+    .card-description {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: auto;
+    }
+
+    .card-brown .card-description { color: rgba(255, 255, 255, 0.7); }
+    .card-teal .card-description { color: rgba(255, 255, 255, 0.7); }
+    .card-blue .card-description,
+    .card-beige .card-description { color: #6B7280; }
+
+    /* Arrow Button */
+    .arrow-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-brown .arrow-btn,
+    .card-teal .arrow-btn {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .card-brown .arrow-btn svg,
+    .card-teal .arrow-btn svg {
+      stroke: white;
+    }
+
+    .card-blue .arrow-btn,
+    .card-beige .arrow-btn {
+      background: rgba(0, 0, 0, 0.06);
+    }
+    .card-blue .arrow-btn svg,
+    .card-beige .arrow-btn svg {
+      stroke: #111827;
+    }
+
+    .arrow-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2;
+      fill: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Section Name</span>
+          <span class="separator">/</span>
+          <span class="slide-number">04</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <h1 class="title">The Langdock Platform</h1>
+
+    <main class="slide-content">
+      <div class="card card-brown">
+        <div class="card-header">
+          <h2 class="card-title">Chat</h2>
+          <div class="arrow-btn">
+            <svg viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+        <p class="card-description">Secure AI chat with enterprise-grade data protection and access to multiple LLMs.</p>
+      </div>
+
+      <div class="card card-blue">
+        <div class="card-header">
+          <h2 class="card-title">Workflows</h2>
+          <div class="arrow-btn">
+            <svg viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+        <p class="card-description">Automate complex processes with visual workflow builder and AI-powered actions.</p>
+      </div>
+
+      <div class="card card-beige">
+        <div class="card-header">
+          <h2 class="card-title">Agents</h2>
+          <div class="arrow-btn">
+            <svg viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+        <p class="card-description">Create custom AI assistants trained on your company knowledge and processes.</p>
+      </div>
+
+      <div class="card card-teal">
+        <div class="card-header">
+          <h2 class="card-title">Integrations</h2>
+          <div class="arrow-btn">
+            <svg viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+        <p class="card-description">Connect with 50+ enterprise tools including Salesforce, HubSpot, Notion, and more.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

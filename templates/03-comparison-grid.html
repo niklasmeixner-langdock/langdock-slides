@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .content-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+    }
+
+    .comparison-table {
+      background: #FFFFFF;
+      border-radius: 16px;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .table-header {
+      display: grid;
+      grid-template-columns: 300px repeat(3, 1fr);
+      background: #111827;
+      color: #FFFFFF;
+    }
+
+    .table-header-cell {
+      padding: 24px 32px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .table-header-cell:first-child {
+      text-align: left;
+    }
+
+    .table-header-cell.highlight {
+      background: #456AFC;
+    }
+
+    .table-row {
+      display: grid;
+      grid-template-columns: 300px repeat(3, 1fr);
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .table-row:last-child {
+      border-bottom: none;
+    }
+
+    .table-cell {
+      padding: 20px 32px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .table-cell:first-child {
+      font-weight: 500;
+      color: #111827;
+      justify-content: flex-start;
+    }
+
+    .table-cell.highlight {
+      background: rgba(68, 105, 252, 0.04);
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      background: rgba(34, 197, 94, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .check svg {
+      width: 16px;
+      height: 16px;
+      color: #22c55e;
+    }
+
+    .cross {
+      width: 28px;
+      height: 28px;
+      background: rgba(239, 68, 68, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cross svg {
+      width: 16px;
+      height: 16px;
+      color: #ef4444;
+    }
+
+    .partial {
+      font-size: 18px;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Comparison</span>
+          <span class="separator">/</span>
+          <span class="slide-number">03</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-header">
+      <h1 class="title">Feature Comparison</h1>
+    </div>
+
+    <div class="comparison-table">
+      <div class="table-header">
+        <div class="table-header-cell">Feature</div>
+        <div class="table-header-cell">ChatGPT</div>
+        <div class="table-header-cell highlight">Langdock</div>
+        <div class="table-header-cell">Microsoft Copilot</div>
+      </div>
+
+      <div class="table-row">
+        <div class="table-cell">Multi-model support</div>
+        <div class="table-cell">
+          <div class="cross">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell highlight">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell">
+          <div class="cross">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-row">
+        <div class="table-cell">EU Data Hosting</div>
+        <div class="table-cell">
+          <div class="cross">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell highlight">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell">
+          <span class="partial">Partial</span>
+        </div>
+      </div>
+
+      <div class="table-row">
+        <div class="table-cell">Custom Assistants</div>
+        <div class="table-cell">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell highlight">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-row">
+        <div class="table-cell">Enterprise SSO</div>
+        <div class="table-cell">
+          <span class="partial">Enterprise only</span>
+        </div>
+        <div class="table-cell highlight">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-row">
+        <div class="table-cell">Knowledge Base Integration</div>
+        <div class="table-cell">
+          <span class="partial">Limited</span>
+        </div>
+        <div class="table-cell highlight">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="table-cell">
+          <div class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

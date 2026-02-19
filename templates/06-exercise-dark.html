@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #1F2937;
+      display: flex;
+      flex-direction: column;
+      padding: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative elements */
+    .accent-circle {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(68, 106, 252, 0.15);
+      filter: blur(80px);
+    }
+
+    .accent-circle-1 {
+      top: -200px;
+      right: -100px;
+    }
+
+    .accent-circle-2 {
+      bottom: -200px;
+      left: -100px;
+    }
+
+    /* STANDARDIZED HEADER - DARK VARIANT */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .separator {
+      font-size: 18px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .slide-tag {
+      background: #0D9488;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 6px 12px;
+      border-radius: 100px;
+    }
+
+    /* CONTENT */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .exercise-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      padding: 10px 20px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .exercise-badge svg {
+      width: 20px;
+      height: 20px;
+      color: #0D9488;
+    }
+
+    .exercise-badge span {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .title {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+    }
+
+    .description {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 48px;
+    }
+
+    .time-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      padding: 12px 24px;
+      border-radius: 12px;
+    }
+
+    .time-indicator svg {
+      width: 24px;
+      height: 24px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .time-indicator span {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="accent-circle accent-circle-1"></div>
+    <div class="accent-circle accent-circle-2"></div>
+
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Exercise</span>
+          <span class="separator">/</span>
+          <span class="slide-number">06</span>
+        </div>
+        <div class="slide-tag">EXERCISE</div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <div class="exercise-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <span>Hands-On Exercise</span>
+      </div>
+
+      <h1 class="title">Create Your First Chat</h1>
+      <p class="description">Open Langdock, start a new conversation, and ask the AI to help you draft a professional email. Experiment with different models to see how responses vary.</p>
+
+      <div class="time-indicator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>5 minutes</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

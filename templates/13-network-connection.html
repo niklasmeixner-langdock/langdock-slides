@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .content-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+    }
+
+    .network-container {
+      flex: 1;
+      position: relative;
+    }
+
+    .connections-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .connection-line {
+      stroke: #E5E7EB;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .central-node {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      background: #111827;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .central-logo {
+      height: 28px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      margin-bottom: 12px;
+    }
+
+    .central-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .outer-node {
+      position: absolute;
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 5;
+    }
+
+    .node-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .node-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .node-icon.blue { background: rgba(68, 105, 252, 0.1); color: #456AFC; }
+    .node-icon.green { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
+    .node-icon.purple { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
+    .node-icon.orange { background: rgba(249, 115, 22, 0.1); color: #f97316; }
+
+    .node-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .node-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .node-subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .node-1 { top: 80px; left: 200px; }
+    .node-2 { top: 80px; right: 200px; }
+    .node-3 { top: 50%; left: 100px; transform: translateY(-50%); }
+    .node-4 { top: 50%; right: 100px; transform: translateY(-50%); }
+    .node-5 { bottom: 80px; left: 200px; }
+    .node-6 { bottom: 80px; right: 200px; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Integrations</span>
+          <span class="separator">/</span>
+          <span class="slide-number">13</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-header">
+      <h1 class="title">Connected to Your Ecosystem</h1>
+    </div>
+
+    <div class="network-container">
+      <svg class="connections-svg" viewBox="0 0 1792 820">
+        <path class="connection-line" d="M 896 410 Q 600 300 350 120"/>
+        <path class="connection-line" d="M 896 410 Q 1200 300 1450 120"/>
+        <path class="connection-line" d="M 896 410 Q 500 410 200 410"/>
+        <path class="connection-line" d="M 896 410 Q 1300 410 1600 410"/>
+        <path class="connection-line" d="M 896 410 Q 600 520 350 700"/>
+        <path class="connection-line" d="M 896 410 Q 1200 520 1450 700"/>
+      </svg>
+
+      <div class="central-node">
+        <img class="central-logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock">
+        <span class="central-title">Langdock</span>
+      </div>
+
+      <div class="outer-node node-1">
+        <div class="node-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="node-content">
+          <span class="node-title">Slack</span>
+          <span class="node-subtitle">Messaging</span>
+        </div>
+      </div>
+
+      <div class="outer-node node-2">
+        <div class="node-icon purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <div class="node-content">
+          <span class="node-title">Notion</span>
+          <span class="node-subtitle">Knowledge</span>
+        </div>
+      </div>
+
+      <div class="outer-node node-3">
+        <div class="node-icon green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        </div>
+        <div class="node-content">
+          <span class="node-title">Google Drive</span>
+          <span class="node-subtitle">Storage</span>
+        </div>
+      </div>
+
+      <div class="outer-node node-4">
+        <div class="node-icon orange">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <div class="node-content">
+          <span class="node-title">SharePoint</span>
+          <span class="node-subtitle">Documents</span>
+        </div>
+      </div>
+
+      <div class="outer-node node-5">
+        <div class="node-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="node-content">
+          <span class="node-title">Outlook</span>
+          <span class="node-subtitle">Email</span>
+        </div>
+      </div>
+
+      <div class="outer-node node-6">
+        <div class="node-icon purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="node-content">
+          <span class="node-title">Confluence</span>
+          <span class="node-subtitle">Wiki</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

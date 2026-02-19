@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* ==========================================================================
+       LANGDOCK SLIDE - AGENDA
+       Version: 5.0
+
+       Numbered list with optional time/duration tags.
+       Clean layout for meeting agendas, workshop schedules, or step lists.
+
+       Use for: Agendas, schedules, step-by-step processes, key takeaways.
+
+       Customization:
+       - Add/remove list items as needed (typically 3-5 items)
+       - Time tags are optional - remove if not needed
+       - Use .list-tag-filled for highlighted items
+       ========================================================================== */
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .title {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      color: #111827;
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* LIST */
+    .content-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 1400px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      border: 1px solid #E5E7EB;
+    }
+
+    .list-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #111827;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .list-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .list-title {
+      font-size: 28px;
+      font-weight: 600;
+      color: #111827;
+      letter-spacing: -0.5px;
+    }
+
+    .list-description {
+      font-size: 20px;
+      font-weight: 400;
+      color: #6B7280;
+      line-height: 1.5;
+    }
+
+    /* Optional Tag */
+    .list-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 2px solid #111827;
+      border-radius: 100px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #111827;
+      align-self: flex-start;
+    }
+
+    .list-tag-filled {
+      background: #456AFC;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Section Name</span>
+          <span class="separator">/</span>
+          <span class="slide-number">05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <h1 class="title">Today's Agenda</h1>
+
+    <main class="slide-content">
+      <div class="content-list">
+        <div class="list-item">
+          <div class="list-number">1</div>
+          <div class="list-content">
+            <h3 class="list-title">Introduction & Company Overview</h3>
+            <p class="list-description">Brief overview of Langdock and our mission to transform enterprise AI.</p>
+          </div>
+          <span class="list-tag">10 min</span>
+        </div>
+
+        <div class="list-item">
+          <div class="list-number">2</div>
+          <div class="list-content">
+            <h3 class="list-title">Platform Demo</h3>
+            <p class="list-description">Live demonstration of Chat, Workflows, and Agents capabilities.</p>
+          </div>
+          <span class="list-tag">25 min</span>
+        </div>
+
+        <div class="list-item">
+          <div class="list-number">3</div>
+          <div class="list-content">
+            <h3 class="list-title">Security & Compliance</h3>
+            <p class="list-description">Enterprise security features, data residency, and compliance certifications.</p>
+          </div>
+          <span class="list-tag">15 min</span>
+        </div>
+
+        <div class="list-item">
+          <div class="list-number">4</div>
+          <div class="list-content">
+            <h3 class="list-title">Q&A and Next Steps</h3>
+            <p class="list-description">Open discussion and planning for pilot program.</p>
+          </div>
+          <span class="list-tag">10 min</span>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

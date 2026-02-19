@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .content-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .solution-layout {
+      display: flex;
+      flex: 1;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .features-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 380px;
+    }
+
+    .feature-item {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(68, 105, 252, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-icon svg {
+      width: 24px;
+      height: 24px;
+      color: #456AFC;
+    }
+
+    .feature-content {
+      flex: 1;
+    }
+
+    .feature-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .feature-description {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .center-hub {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hub-circle {
+      width: 400px;
+      height: 400px;
+      background: #111827;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hub-logo {
+      height: 32px;
+      width: auto;
+      margin-bottom: 24px;
+      filter: brightness(0) invert(1);
+    }
+
+    .hub-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .hub-subtitle {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      max-width: 280px;
+    }
+
+    .connector {
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(to right, #E5E7EB, transparent);
+    }
+
+    .connector-left { left: -60px; top: 50%; }
+    .connector-right { right: -60px; top: 50%; transform: rotate(180deg); }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Overview</span>
+          <span class="separator">/</span>
+          <span class="slide-number">12</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-header">
+      <h1 class="title">The All-in-One AI Platform</h1>
+      <p class="subtitle">Everything your organization needs to adopt AI securely and effectively</p>
+    </div>
+
+    <div class="solution-layout">
+      <div class="features-column">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <div class="feature-title">Chat</div>
+            <div class="feature-description">Multi-model AI conversations</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <div class="feature-title">Assistants</div>
+            <div class="feature-description">Custom AI agents for your team</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <div class="feature-title">Knowledge Base</div>
+            <div class="feature-description">Connect your company data</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-hub">
+        <div class="hub-circle">
+          <div class="connector connector-left"></div>
+          <div class="connector connector-right"></div>
+          <img class="hub-logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock">
+          <div class="hub-title">Langdock</div>
+          <div class="hub-subtitle">One platform for all your AI needs</div>
+        </div>
+      </div>
+
+      <div class="features-column">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <div class="feature-title">Security</div>
+            <div class="feature-description">EU hosting, SOC 2, enterprise SSO</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <div class="feature-title">Analytics</div>
+            <div class="feature-description">Usage insights and reporting</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <div class="feature-title">Admin Controls</div>
+            <div class="feature-description">Permissions and governance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .content-header {
+      margin-bottom: 32px;
+    }
+
+    .label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #456AFC;
+      margin-bottom: 12px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+    }
+
+    .main-content {
+      display: flex;
+      gap: 48px;
+      flex: 1;
+    }
+
+    .screenshot-area {
+      flex: 1;
+      position: relative;
+    }
+
+    .screenshot-container {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .screenshot-placeholder {
+      color: #9CA3AF;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .callout-marker {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      background: #456AFC;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(68, 105, 252, 0.4);
+      z-index: 10;
+    }
+
+    .callout-marker::after {
+      content: '';
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border: 2px solid #456AFC;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    .marker-1 { top: 15%; left: 20%; }
+    .marker-2 { top: 35%; left: 45%; }
+    .marker-3 { top: 60%; left: 30%; }
+    .marker-4 { top: 75%; left: 70%; }
+
+    .annotations-panel {
+      width: 450px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .annotation {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .annotation-number {
+      width: 32px;
+      height: 32px;
+      background: rgba(68, 105, 252, 0.1);
+      color: #456AFC;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .annotation-content {
+      flex: 1;
+    }
+
+    .annotation-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .annotation-description {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Interface Guide</span>
+          <span class="separator">/</span>
+          <span class="slide-number">14</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-header">
+      <div class="label">Interface Guide</div>
+      <h1 class="title">Understanding the Chat Interface</h1>
+    </div>
+
+    <div class="main-content">
+      <div class="screenshot-area">
+        <div class="screenshot-container">
+          <span class="screenshot-placeholder">Screenshot placeholder</span>
+        </div>
+        <div class="callout-marker marker-1">1</div>
+        <div class="callout-marker marker-2">2</div>
+        <div class="callout-marker marker-3">3</div>
+        <div class="callout-marker marker-4">4</div>
+      </div>
+
+      <div class="annotations-panel">
+        <div class="annotation">
+          <div class="annotation-number">1</div>
+          <div class="annotation-content">
+            <div class="annotation-title">Model Selector</div>
+            <div class="annotation-description">Choose from GPT-4, Claude, Gemini, and other available AI models for your conversation.</div>
+          </div>
+        </div>
+
+        <div class="annotation">
+          <div class="annotation-number">2</div>
+          <div class="annotation-content">
+            <div class="annotation-title">Conversation History</div>
+            <div class="annotation-description">Access your previous chats and continue conversations where you left off.</div>
+          </div>
+        </div>
+
+        <div class="annotation">
+          <div class="annotation-number">3</div>
+          <div class="annotation-content">
+            <div class="annotation-title">Input Area</div>
+            <div class="annotation-description">Type your prompts here. Supports markdown formatting and file attachments.</div>
+          </div>
+        </div>
+
+        <div class="annotation">
+          <div class="annotation-number">4</div>
+          <div class="annotation-content">
+            <div class="annotation-title">Quick Actions</div>
+            <div class="annotation-description">Access templates, save responses, and share conversations with your team.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

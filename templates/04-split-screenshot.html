@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .main-content {
+      flex: 1;
+      display: flex;
+      gap: 64px;
+    }
+
+    .text-content {
+      width: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #456AFC;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: #111827;
+      margin-bottom: 24px;
+    }
+
+    .description {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #6B7280;
+      margin-bottom: 40px;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .feature-icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(68, 106, 252, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-icon svg {
+      width: 16px;
+      height: 16px;
+      color: #456AFC;
+    }
+
+    .feature-text {
+      font-size: 20px;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .screenshot-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .screenshot {
+      width: 100%;
+      max-width: 1000px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+    }
+
+    .browser-chrome {
+      background: #E5E7EB;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #9CA3AF;
+    }
+
+    .screenshot-placeholder {
+      background: linear-gradient(135deg, #E5E7EB 0%, #F4F4F5 100%);
+      aspect-ratio: 16/10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9CA3AF;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Features</span>
+          <span class="separator">/</span>
+          <span class="slide-number">04</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="main-content">
+      <div class="text-content">
+        <div class="label">Feature</div>
+        <h1 class="title">Chat with Multiple AI Models</h1>
+        <p class="description">Access GPT-4, Claude, Gemini, and more from a single interface. Switch models mid-conversation for different perspectives.</p>
+
+        <div class="features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span class="feature-text">One interface, multiple models</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span class="feature-text">Switch models mid-conversation</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span class="feature-text">Compare outputs side-by-side</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="screenshot-container">
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="browser-dots">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+            </div>
+          </div>
+          <div class="screenshot-placeholder">
+            Screenshot placeholder
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
