@@ -55,7 +55,9 @@
       "Bash(gh pr create:*)",
       "Bash(gh pr view:*)",
       "Bash(for f in CLAUDE.md templates/*.html)",
-      "Bash(do sed -i '' 's/brand-assets\\\\/brand-assets/brand-assets/g' \"$f\")"
+      "Bash(do sed -i '' 's/brand-assets\\\\/brand-assets/brand-assets/g' \"$f\")",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_evaluate"
     ]
   },
   "enabledMcpjsonServers": [
