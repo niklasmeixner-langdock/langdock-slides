@@ -10,7 +10,6 @@
       "Bash(open:*)",
       "Bash(pip3 install:*)",
       "Bash(python3:*)",
-      "mcp__html-to-design__import-html",
       "Bash(sort:*)",
       "Bash(tr:*)",
       "Bash(git add:*)",
@@ -56,14 +55,10 @@
       "mcp__playwright__browser_evaluate",
       "WebFetch(domain:docs.langdock.com)",
       "mcp__playwright__browser_resize",
-      "mcp__24b3a201-5ed1-4238-86c4-253146c66eaf__import-url",
       "mcp__mcp-registry__search_mcp_registry",
-      "mcp__24b3a201-5ed1-4238-86c4-253146c66eaf__import-html",
       "Bash(claude config list)",
       "Bash(cat ~/.config/claude/*.json)"
     ]
   },
-  "enabledMcpjsonServers": [
-    "html-to-design"
-  ]
+  "enabledMcpjsonServers": []
 }
