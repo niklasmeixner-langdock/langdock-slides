@@ -1,0 +1,9 @@
+# Generated slides (per-client, not version controlled)
+slides/
+
+# OS files
+.DS_Store
+
+# Node modules (if using npm packages)
+node_modules/
+.playwright-mcp/

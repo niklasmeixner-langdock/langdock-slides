@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* ==========================================================================
+       LANGDOCK SLIDE - MODEL OVERVIEW
+       Version: 5.0
+
+       Use for: AI model comparisons, capability overviews, feature tables.
+       Features: Model rows with icon, name/provider, use case, description, speed dots.
+
+       Customization:
+       - Add/remove model rows as needed
+       - Adjust speed indicators (filled vs empty dots)
+       - Change icon background colors (first row typically #144C5E, others #E8E4DF)
+       ========================================================================== */
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+      margin-bottom: 48px;
+    }
+
+    .models-container {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 32px;
+      border: 1px solid #E5E7EB;
+    }
+
+    .model-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .model-row:last-child {
+      border-bottom: none;
+    }
+
+    .model-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .model-icon.highlight {
+      background: #144C5E;
+      color: white;
+    }
+
+    .model-icon.default {
+      background: #E8E4DF;
+      color: #111827;
+    }
+
+    .model-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .model-info {
+      flex: 0 0 140px;
+    }
+
+    .model-name {
+      font-size: 22px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .model-provider {
+      font-size: 14px;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .model-usecase {
+      flex: 0 0 180px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .model-description {
+      flex: 1;
+      font-size: 18px;
+      color: #6B7280;
+    }
+
+    .speed-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .speed-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .speed-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .speed-dot.filled {
+      background: #111827;
+    }
+
+    .speed-dot.empty {
+      background: #D0D0D0;
+    }
+
+    .speed-label {
+      font-size: 18px;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Model Overview</span>
+          <span class="separator">/</span>
+          <span class="slide-number">10</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <h1 class="title">Die Modelle im Überblick</h1>
+
+    <div class="models-container">
+      <!-- GPT Row (highlighted) -->
+      <div class="model-row">
+        <div class="model-icon highlight">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M14.949 6.547a3.94 3.94 0 0 0-.348-3.273 4.11 4.11 0 0 0-4.4-1.934 A4.1 4.1 0 0 0 8.423.2 4.15 4.15 0 0 0 6.305.086a4.1 4.1 0 0 0-1.891.948 4.04 4.04 0 0 0-1.158 1.753 4.1 4.1 0 0 0-1.563.679A4 4 0 0 0 .554 4.72a3.99 3.99 0 0 0 .502 4.731 3.94 3.94 0 0 0 .346 3.274 4.11 4.11 0 0 0 4.402 1.933c.382.425.852.764 1.377.995.526.231 1.095.35 1.67.346 1.78.002 3.358-1.132 3.901-2.804a4.1 4.1 0 0 0 1.563-.68 4 4 0 0 0 1.14-1.253 3.99 3.99 0 0 0-.506-4.716m-6.097 8.406a3.05 3.05 0 0 1-1.945-.694l.096-.054 3.23-1.838a.53.53 0 0 0 .265-.455v-4.49l1.366.778q.02.011.025.035v3.722c-.003 1.653-1.361 2.992-3.037 2.996m-6.53-2.75a2.95 2.95 0 0 1-.36-2.01l.095.057L5.29 12.09a.53.53 0 0 0 .527 0l3.949-2.246v1.555a.05.05 0 0 1-.022.041L6.473 13.3c-1.454.826-3.311.335-4.15-1.098m-.85-6.94A3.02 3.02 0 0 1 3.07 3.949v3.785a.51.51 0 0 0 .262.451l3.93 2.237-1.366.779a.05.05 0 0 1-.048 0L2.585 9.342a2.98 2.98 0 0 1-1.113-4.094zm11.216 2.571L8.747 5.576l1.362-.776a.05.05 0 0 1 .048 0l3.265 1.86a3 3 0 0 1 1.173 1.207 2.96 2.96 0 0 1-.27 3.2 3.05 3.05 0 0 1-1.36.997V8.279a.52.52 0 0 0-.276-.445m1.36-2.015-.097-.057-3.226-1.855a.53.53 0 0 0-.53 0L6.249 6.153V4.598a.04.04 0 0 1 .019-.04L9.533 2.7a3.07 3.07 0 0 1 3.257.139c.474.325.843.778 1.066 1.303.223.526.289 1.103.191 1.664zM5.503 8.575 4.139 7.8a.05.05 0 0 1-.026-.037V4.049c0-.57.166-1.127.476-1.607s.752-.864 1.275-1.105a3.08 3.08 0 0 1 3.234.41l-.096.054-3.23 1.838a.53.53 0 0 0-.265.455zm.742-1.577 1.758-1 1.762 1v2l-1.755 1-1.762-1z"/>
+          </svg>
+        </div>
+        <div class="model-info">
+          <div class="model-name">GPT-5.2</div>
+          <div class="model-provider">OpenAI</div>
+        </div>
+        <div class="model-usecase">Allrounder</div>
+        <div class="model-description">E-Mails, Brainstorming, Zusammenfassungen</div>
+        <div class="speed-indicator">
+          <div class="speed-dots">
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+          </div>
+          <span class="speed-label">Schnell</span>
+        </div>
+      </div>
+
+      <!-- Claude Sonnet Row -->
+      <div class="model-row">
+        <div class="model-icon default">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128h-.228l-.79-.048-2.696-.072-2.34-.098-2.266-.12-.572-.122L0 11.955l.054-.352.482-.322.685.06 1.52.104 2.278.158 1.652.096 2.448.256h.39l.054-.158-.134-.098-.102-.096-2.358-1.598-2.552-1.687-1.335-.972-.722-.492-.366-.46-.156-1.008.654-.722.88.06.226.06.892.686 1.907 1.476 2.49 1.833.364.304.146-.102.018-.074-.164-.272-1.355-2.447-1.445-2.49-.644-1.032-.17-.618a3 3 0 0 1-.102-.728l.746-1.014L6.693 0l.997.134.42.364.618 1.414 1.002 2.228 1.555 3.032.454.898.244.832.09.256h.158v-.146l.128-1.707.236-2.095.232-2.697.078-.758.376-.91.748-.492.582.28.48.686-.068.442-.286 1.852-.557 2.904-.366 1.942h.214l.242-.24.984-1.306 1.652-2.064.728-.82.85-.904.546-.432h1.032l.76 1.13-.34 1.166-1.064 1.347-.88 1.142-1.263 1.701-.788 1.36.072.108.188-.018 2.855-.606 1.54-.28 1.841-.316.832.388.09.396-.328.806-1.967.486-2.308.462-3.439.812-.042.03.048.06 1.549.148.662.036h1.621l3.018.226.79.52.474.638-.08.486-1.214.618-5.465-1.299-1.312-.328h-.18v.11l1.092 1.068 2.003 1.809 2.509 2.333.126.576-.322.454-.34-.048-2.203-1.657-.85-.748-1.927-1.621h-.126v.17l.444.65 2.343 3.521.12 1.08-.168.352-.608.212-.668-.12-1.371-1.926-1.415-2.167-1.142-1.943-.14.08-.674 7.255-.316.37-.728.28-.606-.462-.322-.746.322-1.476.388-1.926.316-1.529.286-1.901.168-.632-.012-.042-.138.018-1.435 1.967-2.18 2.945-1.725 1.847-.412.164-.718-.372.068-.662.4-.586 2.387-3.037 1.439-1.881.928-1.088-.006-.158h-.054l-6.34 4.116-1.128.144-.488-.454.06-.746.232-.244 1.907-1.311z"/>
+          </svg>
+        </div>
+        <div class="model-info">
+          <div class="model-name">Claude Sonnet</div>
+          <div class="model-provider">Anthropic</div>
+        </div>
+        <div class="model-usecase">Natürliches Schreiben</div>
+        <div class="model-description">Texte ohne KI-Klang, nuancierte Kommunikation</div>
+        <div class="speed-indicator">
+          <div class="speed-dots">
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot empty"></span>
+          </div>
+          <span class="speed-label">Mittel</span>
+        </div>
+      </div>
+
+      <!-- Reasoning Model Row -->
+      <div class="model-row">
+        <div class="model-icon default">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128h-.228l-.79-.048-2.696-.072-2.34-.098-2.266-.12-.572-.122L0 11.955l.054-.352.482-.322.685.06 1.52.104 2.278.158 1.652.096 2.448.256h.39l.054-.158-.134-.098-.102-.096-2.358-1.598-2.552-1.687-1.335-.972-.722-.492-.366-.46-.156-1.008.654-.722.88.06.226.06.892.686 1.907 1.476 2.49 1.833.364.304.146-.102.018-.074-.164-.272-1.355-2.447-1.445-2.49-.644-1.032-.17-.618a3 3 0 0 1-.102-.728l.746-1.014L6.693 0l.997.134.42.364.618 1.414 1.002 2.228 1.555 3.032.454.898.244.832.09.256h.158v-.146l.128-1.707.236-2.095.232-2.697.078-.758.376-.91.748-.492.582.28.48.686-.068.442-.286 1.852-.557 2.904-.366 1.942h.214l.242-.24.984-1.306 1.652-2.064.728-.82.85-.904.546-.432h1.032l.76 1.13-.34 1.166-1.064 1.347-.88 1.142-1.263 1.701-.788 1.36.072.108.188-.018 2.855-.606 1.54-.28 1.841-.316.832.388.09.396-.328.806-1.967.486-2.308.462-3.439.812-.042.03.048.06 1.549.148.662.036h1.621l3.018.226.79.52.474.638-.08.486-1.214.618-5.465-1.299-1.312-.328h-.18v.11l1.092 1.068 2.003 1.809 2.509 2.333.126.576-.322.454-.34-.048-2.203-1.657-.85-.748-1.927-1.621h-.126v.17l.444.65 2.343 3.521.12 1.08-.168.352-.608.212-.668-.12-1.371-1.926-1.415-2.167-1.142-1.943-.14.08-.674 7.255-.316.37-.728.28-.606-.462-.322-.746.322-1.476.388-1.926.316-1.529.286-1.901.168-.632-.012-.042-.138.018-1.435 1.967-2.18 2.945-1.725 1.847-.412.164-.718-.372.068-.662.4-.586 2.387-3.037 1.439-1.881.928-1.088-.006-.158h-.054l-6.34 4.116-1.128.144-.488-.454.06-.746.232-.244 1.907-1.311z"/>
+          </svg>
+        </div>
+        <div class="model-info">
+          <div class="model-name">Opus Reasoning</div>
+          <div class="model-provider">Anthropic</div>
+        </div>
+        <div class="model-usecase">Komplexes Denken</div>
+        <div class="model-description">Mathe, Logik, mehrstufige Analysen</div>
+        <div class="speed-indicator">
+          <div class="speed-dots">
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot empty"></span>
+            <span class="speed-dot empty"></span>
+          </div>
+          <span class="speed-label">Langsamer</span>
+        </div>
+      </div>
+
+      <!-- Gemini Row -->
+      <div class="model-row">
+        <div class="model-icon default">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C12 6.627 8.418 10.725 3 12c5.418 1.275 9 5.373 9 12 0-6.627 3.582-10.725 9-12-5.418-1.275-9-5.373-9-12z"/>
+          </svg>
+        </div>
+        <div class="model-info">
+          <div class="model-name">Gemini 2.5</div>
+          <div class="model-provider">Google</div>
+        </div>
+        <div class="model-usecase">Lange Dokumente</div>
+        <div class="model-description">100+ Seiten PDFs, große Kontexte</div>
+        <div class="speed-indicator">
+          <div class="speed-dots">
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot empty"></span>
+          </div>
+          <span class="speed-label">Mittel</span>
+        </div>
+      </div>
+
+      <!-- Mini Model Row -->
+      <div class="model-row">
+        <div class="model-icon default">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M14.949 6.547a3.94 3.94 0 0 0-.348-3.273 4.11 4.11 0 0 0-4.4-1.934 A4.1 4.1 0 0 0 8.423.2 4.15 4.15 0 0 0 6.305.086a4.1 4.1 0 0 0-1.891.948 4.04 4.04 0 0 0-1.158 1.753 4.1 4.1 0 0 0-1.563.679A4 4 0 0 0 .554 4.72a3.99 3.99 0 0 0 .502 4.731 3.94 3.94 0 0 0 .346 3.274 4.11 4.11 0 0 0 4.402 1.933c.382.425.852.764 1.377.995.526.231 1.095.35 1.67.346 1.78.002 3.358-1.132 3.901-2.804a4.1 4.1 0 0 0 1.563-.68 4 4 0 0 0 1.14-1.253 3.99 3.99 0 0 0-.506-4.716m-6.097 8.406a3.05 3.05 0 0 1-1.945-.694l.096-.054 3.23-1.838a.53.53 0 0 0 .265-.455v-4.49l1.366.778q.02.011.025.035v3.722c-.003 1.653-1.361 2.992-3.037 2.996m-6.53-2.75a2.95 2.95 0 0 1-.36-2.01l.095.057L5.29 12.09a.53.53 0 0 0 .527 0l3.949-2.246v1.555a.05.05 0 0 1-.022.041L6.473 13.3c-1.454.826-3.311.335-4.15-1.098m-.85-6.94A3.02 3.02 0 0 1 3.07 3.949v3.785a.51.51 0 0 0 .262.451l3.93 2.237-1.366.779a.05.05 0 0 1-.048 0L2.585 9.342a2.98 2.98 0 0 1-1.113-4.094zm11.216 2.571L8.747 5.576l1.362-.776a.05.05 0 0 1 .048 0l3.265 1.86a3 3 0 0 1 1.173 1.207 2.96 2.96 0 0 1-.27 3.2 3.05 3.05 0 0 1-1.36.997V8.279a.52.52 0 0 0-.276-.445m1.36-2.015-.097-.057-3.226-1.855a.53.53 0 0 0-.53 0L6.249 6.153V4.598a.04.04 0 0 1 .019-.04L9.533 2.7a3.07 3.07 0 0 1 3.257.139c.474.325.843.778 1.066 1.303.223.526.289 1.103.191 1.664zM5.503 8.575 4.139 7.8a.05.05 0 0 1-.026-.037V4.049c0-.57.166-1.127.476-1.607s.752-.864 1.275-1.105a3.08 3.08 0 0 1 3.234.41l-.096.054-3.23 1.838a.53.53 0 0 0-.265.455zm.742-1.577 1.758-1 1.762 1v2l-1.755 1-1.762-1z"/>
+          </svg>
+        </div>
+        <div class="model-info">
+          <div class="model-name">GPT-5.1 mini</div>
+          <div class="model-provider">OpenAI</div>
+        </div>
+        <div class="model-usecase">Schnelle Antworten</div>
+        <div class="model-description">Einfache Fragen, schnelle Entwürfe</div>
+        <div class="speed-indicator">
+          <div class="speed-dots">
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+            <span class="speed-dot filled"></span>
+          </div>
+          <span class="speed-label">Sehr schnell</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      display: flex;
+      flex-direction: column;
+      padding: 64px;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #456AFC;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: -3px;
+      line-height: 1.1;
+      color: #111827;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      line-height: 1.4;
+      color: #6B7280;
+      max-width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Module 1</span>
+          <span class="separator">/</span>
+          <span class="slide-number">01</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <div class="section-label">Module 1</div>
+      <h1 class="title">Getting Started with Langdock</h1>
+      <p class="subtitle">Learn the fundamentals of the platform and how to navigate the interface effectively.</p>
+    </div>
+  </div>
+</body>
+</html>

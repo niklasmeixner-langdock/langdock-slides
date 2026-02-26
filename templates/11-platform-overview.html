@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .content-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #456AFC;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      flex: 1;
+    }
+
+    .feature-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(68, 105, 252, 0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .feature-icon svg {
+      width: 28px;
+      height: 28px;
+      color: #456AFC;
+    }
+
+    .feature-title {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .feature-description {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #6B7280;
+      flex: 1;
+    }
+
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      background: #F4F4F5;
+      border: 1px solid #E5E7EB;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Platform</span>
+          <span class="separator">/</span>
+          <span class="slide-number">11</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-header">
+      <div class="label">Platform Overview</div>
+      <h1 class="title">Everything You Need for Enterprise AI</h1>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="feature-title">Multi-Model Chat</div>
+        <div class="feature-description">Access GPT-4, Claude, Gemini, and more from one unified interface. Switch models mid-conversation.</div>
+        <div class="feature-tags">
+          <span class="tag">GPT-4</span>
+          <span class="tag">Claude</span>
+          <span class="tag">Gemini</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="feature-title">Custom Assistants</div>
+        <div class="feature-description">Build specialized AI assistants with custom instructions, knowledge bases, and capabilities.</div>
+        <div class="feature-tags">
+          <span class="tag">Templates</span>
+          <span class="tag">Sharing</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        </div>
+        <div class="feature-title">Knowledge Base</div>
+        <div class="feature-description">Connect your company data from Notion, Confluence, Google Drive, and more for context-aware AI.</div>
+        <div class="feature-tags">
+          <span class="tag">50+ Integrations</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <div class="feature-title">Enterprise Security</div>
+        <div class="feature-description">EU data hosting, SOC 2 compliance, SSO, and enterprise-grade security controls.</div>
+        <div class="feature-tags">
+          <span class="tag">EU Hosted</span>
+          <span class="tag">SOC 2</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </div>
+        <div class="feature-title">Admin Analytics</div>
+        <div class="feature-description">Full visibility into AI usage across your organization with detailed analytics and reporting.</div>
+        <div class="feature-tags">
+          <span class="tag">Dashboard</span>
+          <span class="tag">Reports</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </div>
+        <div class="feature-title">Workflows</div>
+        <div class="feature-description">Automate repetitive tasks with AI-powered workflows and custom automations.</div>
+        <div class="feature-tags">
+          <span class="tag">Automation</span>
+          <span class="tag">No-Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

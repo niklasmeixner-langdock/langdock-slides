@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .content-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #6B7280;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+    }
+
+    .logos-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      flex: 1;
+      align-content: center;
+      padding: 0 64px;
+    }
+
+    .logo-item {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+    }
+
+    .logo-placeholder {
+      font-size: 20px;
+      font-weight: 600;
+      color: #9CA3AF;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Customers</span>
+          <span class="separator">/</span>
+          <span class="slide-number">10</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-header">
+      <div class="label">Trusted by leading companies</div>
+      <h1 class="title">Join 3,000+ organizations using Langdock</h1>
+    </div>
+
+    <div class="logos-grid">
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 1</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 2</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 3</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 4</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 5</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 6</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 7</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 8</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 9</span>
+      </div>
+      <div class="logo-item">
+        <span class="logo-placeholder">Company 10</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

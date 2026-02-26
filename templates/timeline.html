@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* ==========================================================================
+       LANGDOCK SLIDE - TIMELINE
+       Version: 5.0
+
+       Use for: Project timelines, phase overviews, journey maps.
+       Features: Phase blocks, week/period grid, milestone markers, legend.
+
+       Customization:
+       - Adjust grid-template-columns in .phases-row for different phase durations
+       - Add/remove columns in .periods-grid as needed
+       - Move milestone dots to different periods
+       ========================================================================== */
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      background: #F4F4F5;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* STANDARDIZED HEADER */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .slide-header .logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .separator {
+      font-size: 18px;
+      color: #9CA3AF;
+    }
+
+    .slide-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    /* CONTENT */
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #111827;
+      margin-bottom: 48px;
+    }
+
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Timeline container */
+    .timeline-container {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 48px;
+      border: 1px solid #E5E7EB;
+    }
+
+    /* Phase blocks row */
+    .phases-row {
+      display: grid;
+      grid-template-columns: 2fr 4fr 4fr 2fr;
+      gap: 8px;
+      margin-bottom: 48px;
+    }
+
+    .phase-block {
+      padding: 20px 24px;
+      border-radius: 12px;
+    }
+
+    .phase-block.teal { background: #144C5E; }
+    .phase-block.blue { background: #B6CEE2; }
+    .phase-block.sage { background: #C6D0CF; }
+    .phase-block.brown { background: #4D473C; }
+    .phase-block.beige { background: #D8D5CB; }
+
+    .phase-label {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .phase-block.teal .phase-label,
+    .phase-block.brown .phase-label { color: rgba(255, 255, 255, 0.6); }
+    .phase-block.blue .phase-label,
+    .phase-block.sage .phase-label,
+    .phase-block.beige .phase-label { color: #6B7280; }
+
+    .phase-title {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .phase-block.teal .phase-title,
+    .phase-block.brown .phase-title { color: white; }
+    .phase-block.blue .phase-title,
+    .phase-block.sage .phase-title,
+    .phase-block.beige .phase-title { color: #111827; }
+
+    .phase-duration {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .phase-block.teal .phase-duration,
+    .phase-block.brown .phase-duration { color: rgba(255, 255, 255, 0.7); }
+    .phase-block.blue .phase-duration,
+    .phase-block.sage .phase-duration,
+    .phase-block.beige .phase-duration { color: #6B7280; }
+
+    /* Period grid */
+    .periods-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .period-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .period-number {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .period-bar {
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    /* Color coding for periods */
+    .period-column:nth-child(-n+2) .period-bar { background: #144C5E; }
+    .period-column:nth-child(n+3):nth-child(-n+6) .period-bar { background: #B6CEE2; }
+    .period-column:nth-child(n+7):nth-child(-n+10) .period-bar { background: #C6D0CF; }
+    .period-column:nth-child(n+11) .period-bar { background: #4D473C; }
+
+    /* Milestone dot */
+    .milestone-dot {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #111827;
+    }
+
+    .period-label {
+      font-size: 18px;
+      color: #6B7280;
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 32px;
+      border-top: 1px solid #E5E7EB;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 4px;
+    }
+
+    .legend-dot.round { border-radius: 50%; }
+
+    .legend-text {
+      font-size: 18px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <!-- STANDARDIZED HEADER -->
+    <div class="slide-header">
+      <img class="logo" src="assets/brand-assets/langdock-logo.png" alt="Langdock" height="32">
+      <div class="header-right">
+        <div class="header-nav">
+          <span class="section-name">Timeline</span>
+          <span class="separator">/</span>
+          <span class="slide-number">08</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <h1 class="title">Project Timeline</h1>
+
+    <main class="slide-content">
+      <div class="timeline-container">
+        <div class="phases-row">
+          <div class="phase-block teal">
+            <div class="phase-label">Phase 1</div>
+            <div class="phase-title">Setup</div>
+            <div class="phase-duration">Weeks 1-2</div>
+          </div>
+          <div class="phase-block blue">
+            <div class="phase-label">Phase 2</div>
+            <div class="phase-title">Development</div>
+            <div class="phase-duration">Weeks 3-6</div>
+          </div>
+          <div class="phase-block sage">
+            <div class="phase-label">Phase 3</div>
+            <div class="phase-title">Testing</div>
+            <div class="phase-duration">Weeks 7-10</div>
+          </div>
+          <div class="phase-block brown">
+            <div class="phase-label">Phase 4</div>
+            <div class="phase-title">Launch</div>
+            <div class="phase-duration">Weeks 11-12</div>
+          </div>
+        </div>
+
+        <div class="periods-grid">
+          <div class="period-column">
+            <div class="period-number">1</div>
+            <div class="period-bar"><div class="milestone-dot"></div></div>
+            <div class="period-label">Kickoff</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">2</div>
+            <div class="period-bar"></div>
+            <div class="period-label">Config</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">3</div>
+            <div class="period-bar"><div class="milestone-dot"></div></div>
+            <div class="period-label">Start</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">4</div>
+            <div class="period-bar"></div>
+            <div class="period-label">Build</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">5</div>
+            <div class="period-bar"></div>
+            <div class="period-label">Build</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">6</div>
+            <div class="period-bar"><div class="milestone-dot"></div></div>
+            <div class="period-label">Review</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">7</div>
+            <div class="period-bar"></div>
+            <div class="period-label">Test</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">8</div>
+            <div class="period-bar"></div>
+            <div class="period-label">Test</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">9</div>
+            <div class="period-bar"></div>
+            <div class="period-label">Fix</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">10</div>
+            <div class="period-bar"><div class="milestone-dot"></div></div>
+            <div class="period-label">Sign-off</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">11</div>
+            <div class="period-bar"></div>
+            <div class="period-label">Deploy</div>
+          </div>
+          <div class="period-column">
+            <div class="period-number">12</div>
+            <div class="period-bar"><div class="milestone-dot"></div></div>
+            <div class="period-label">Launch</div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #144C5E;"></div>
+            <span class="legend-text">Setup & Planning</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #B6CEE2;"></div>
+            <span class="legend-text">Development</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #C6D0CF;"></div>
+            <span class="legend-text">Testing & QA</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #4D473C;"></div>
+            <span class="legend-text">Launch & Handoff</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot round" style="background: #111827;"></div>
+            <span class="legend-text">Key Milestone</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
