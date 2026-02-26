@@ -7,9 +7,6 @@
       "Bash(claude --version:*)",
       "Bash(claude mcp add:*)",
       "Bash(claude mcp list:*)",
-      "mcp__figma-desktop__get_design_context",
-      "mcp__figma-desktop__get_screenshot",
-      "mcp__figma-desktop__get_metadata",
       "Bash(open:*)",
       "Bash(pip3 install:*)",
       "Bash(python3:*)",
@@ -20,7 +17,6 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(git ls-tree -r --name-only HEAD)",
-      "mcp__figma-desktop__get_variable_defs",
       "Bash(done)",
       "Bash(git checkout:*)",
       "Bash(ls:*)",
@@ -62,11 +58,12 @@
       "mcp__playwright__browser_resize",
       "mcp__24b3a201-5ed1-4238-86c4-253146c66eaf__import-url",
       "mcp__mcp-registry__search_mcp_registry",
-      "mcp__24b3a201-5ed1-4238-86c4-253146c66eaf__import-html"
+      "mcp__24b3a201-5ed1-4238-86c4-253146c66eaf__import-html",
+      "Bash(claude config list)",
+      "Bash(cat ~/.config/claude/*.json)"
     ]
   },
   "enabledMcpjsonServers": [
-    "figma-desktop",
     "html-to-design"
   ]
 }
