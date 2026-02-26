@@ -132,6 +132,8 @@ Docs: https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/#gene
 
 ### Per-slide Capture
 
+**CRITICAL: All slides MUST be captured at exactly 1920x1080 pixels.** Use Playwright with explicit viewport sizing—never use `open` command with hash URLs as it uses the system browser's default viewport.
+
 ```javascript
 // 1. Generate capture ID
 const { captureId } = generate_figma_design({
@@ -139,12 +141,21 @@ const { captureId } = generate_figma_design({
   fileKey: "<file-key>"
 })
 
-// 2. Navigate to slide
+// 2. Set viewport to EXACTLY 1920x1080 (MANDATORY)
+mcp__playwright__browser_resize({
+  width: 1920,
+  height: 1080
+})
+
+// 3. Navigate to slide
 mcp__playwright__browser_navigate({
   url: "http://localhost:8080/slides/<project>/slide.html"
 })
 
-// 3. Trigger capture (fire-and-forget, do NOT await the result)
+// 4. Wait for page to fully render
+mcp__playwright__browser_wait_for({ time: 1 })
+
+// 5. Trigger capture
 mcp__playwright__browser_run_code({
   code: `async (page) => {
     await page.evaluate(() => {
@@ -158,7 +169,7 @@ mcp__playwright__browser_run_code({
   }`
 })
 
-// 4. Poll for completion
+// 6. Poll for completion
 generate_figma_design({
   captureId: "<capture-id>",
   outputMode: "existingFile",
