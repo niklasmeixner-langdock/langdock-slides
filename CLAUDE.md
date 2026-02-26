@@ -50,7 +50,7 @@ This keeps the main branch clean and allows review before merging.
 
 Collect from user:
 - **Project name** → Creates `slides/<project-name>/` folder
-- **Figma destination** → Call `mcp__figma__generate_figma_design()` to show options
+- **Figma destination** → Get the Figma file key from the user
 
 Start infrastructure:
 ```bash
@@ -121,18 +121,20 @@ styleguide.md            # Full design system reference
 
 ## Technical: Figma Import
 
-Slides are captured via headless browser and imported to Figma automatically.
+Slides are captured via headless browser and imported to Figma using the `generate_figma_design` tool from the **remote Figma MCP server**.
 
-### Per-slide Capture
+Docs: https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/#generate_figma_design
 
 **Important**: All generated slides must include the Figma capture script in `<head>`:
 ```html
 <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 ```
 
+### Per-slide Capture
+
 ```javascript
 // 1. Generate capture ID
-const { captureId } = mcp__figma__generate_figma_design({
+const { captureId } = generate_figma_design({
   outputMode: "existingFile",
   fileKey: "<file-key>"
 })
@@ -157,7 +159,7 @@ mcp__playwright__browser_run_code({
 })
 
 // 4. Poll for completion
-mcp__figma__generate_figma_design({
+generate_figma_design({
   captureId: "<capture-id>",
   outputMode: "existingFile",
   fileKey: "<file-key>"

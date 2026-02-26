@@ -57,7 +57,12 @@
       "Bash(for f in CLAUDE.md templates/*.html)",
       "Bash(do sed -i '' 's/brand-assets\\\\/brand-assets/brand-assets/g' \"$f\")",
       "mcp__playwright__browser_click",
-      "mcp__playwright__browser_evaluate"
+      "mcp__playwright__browser_evaluate",
+      "WebFetch(domain:docs.langdock.com)",
+      "mcp__playwright__browser_resize",
+      "mcp__24b3a201-5ed1-4238-86c4-253146c66eaf__import-url",
+      "mcp__mcp-registry__search_mcp_registry",
+      "mcp__24b3a201-5ed1-4238-86c4-253146c66eaf__import-html"
     ]
   },
   "enabledMcpjsonServers": [
